@@ -22,4 +22,10 @@ public class PoddesignApplication {
 		return "Hello World";
 	}
 
+	@GetMapping("/rajini")
+	public String getValue1() {
+		log.info("request recieved");
+		return "Annathe";
+	}
+
 }
