@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta24
+kind: Config
+metadata:
+  name: poddesign
+build:
+  artifacts:
+  - image: poddesign-0.0.1-snapshot.jar
+    jib: {}
+  local: {}
+deploy:
+  kubectl:
+    manifests:
+    - k8s-deployment.yaml
+    - k8s-service.yaml
